@@ -82,7 +82,8 @@ contract('MetaCoin', function(accounts) {
     var account_one = accounts[0];
     var account_two = accounts[1];
 
-    var hash = '0x' + web4.sha3('Schoolbus');
+    var message = 'Schoolbus';
+    var hash = '0x' + web4.sha3(message);
     var signature = web4.eth.sign(account_one, hash);
 
     var r = signature.slice(0, 66);
@@ -91,7 +92,7 @@ contract('MetaCoin', function(accounts) {
     v = web4.toDecimal(v);
 
     var properties = {
-      message: 'Schoolbus',
+      message: message,
       address: account_one,
       hash: hash,
       signature: signature,
