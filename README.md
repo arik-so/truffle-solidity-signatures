@@ -19,6 +19,8 @@ Open one terminal window, where you will start testrpc to run in the background:
 testrpc
 ```
 
+Make sure you aren't running any interfering Ethereum JSON-RPC clients that could interfere on the port. Make sure that before running the preceding command, port 8545 is unreachable on the loopback IP address.
+
 In a separate terminal window, navigate to this project's directory, and try any of the following three commands:
 
 ```shell
